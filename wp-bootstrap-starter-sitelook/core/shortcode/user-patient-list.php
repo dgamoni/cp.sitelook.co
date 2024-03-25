@@ -18,7 +18,7 @@ function user_patient_list_func( $atts ){
 						<h2>Patients <b>Management</b></h2>
 					</div>
 					<div class="col-sm-7">
-						<a href="/add-new-patient/" class="btn btn-primary" target="_blank"><i class="material-icons">&#xE147;</i> <span>Add New User</span></a>
+						<a href="/therapist-home/#new_patients" class="btn btn-primary" ><i class="material-icons">&#xE147;</i> <span>Add New Pacient</span></a>
 						<a href="#" class="btn btn-primary"><i class="material-icons">&#xE24D;</i> <span>Export to Excel</span></a>						
 					</div>
                 </div>
@@ -42,11 +42,11 @@ function user_patient_list_func( $atts ){
 					'fields'	=> 'all_with_meta'
 				);
 					$users = get_users( $args );
-					foreach( $users as $key=> $user ){?>
-
+					foreach( $users as $key=> $user ){ ?>
+					<?php //var_dump( get_avatar_url( $user->ID )); ?>
                     <tr>
                         <td><?php echo $key; ?></td>
-                        <td><a href="#"><img src="<?php echo get_avatar_url( $user->ID ); ?>" class="avatar" alt=""><?php echo $user->display_name; ?></a></td>
+                        <td><a href="<?php echo home_url() .'/user/'. $user->user_nicename.'/?profiletab=main&um_action=edit'; ?>" target="_blank"><img src="<?php echo get_avatar_url( $user->ID ); ?>" class="avatar" alt=""><?php echo $user->display_name; ?></a></td>
                         <td><?php echo $user->user_registered; ?></td>                        
                         <td>Patien</td>
 						<td><span class="status text-success">&bull;</span> Active</td>

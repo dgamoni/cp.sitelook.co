@@ -95,6 +95,7 @@ table.table .avatar {
 	border-radius: 50%;
 	vertical-align: middle;
 	margin-right: 10px;
+	width: 40px;
 }
 .status {
 	font-size: 30px;
@@ -151,4 +152,221 @@ table.table .avatar {
     float: left;
     margin-top: 10px;
     font-size: 13px;
+}
+
+/*big tab*/
+#therapist_big_tab .vc_tta-tab a {
+	display: flex;
+    flex-direction: column;
+        border: none;
+    background: transparent;
+    width: 100%;
+    text-align: center;
+}
+#therapist_big_tab .vc_tta-tab a i {
+	    font-size: 76px;
+    line-height: inherit;
+}
+.wpb-js-composer #therapist_big_tab .vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels {
+    background-color: transparent;
+}
+.wpb-js-composer #therapist_big_tab .vc_tta-tabs.vc_tta-tabs-position-top .vc_tta-tabs-list {
+    display: flex;
+    justify-content: space-around;
+}
+.wpb-js-composer #therapist_big_tab .vc_tta.vc_general .vc_tta-tab {
+    padding: 0;
+    /*border-radius: 50%;*/
+    /*border: 1px solid #cccccc87;*/
+    /*width: 164px;*/
+    /*height: 164px;*/
+    /*background: white;*/
+    display: flex;
+}
+.wpb-js-composer #therapist_big_tab .vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active>a {
+    background: transparent;
+}
+.wpb-js-composer #therapist_big_tab .vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active>a {
+    border: none;
+    background: transparent;
+    width: 100%;
+    text-align: center;
+}
+.wpb-js-composer #therapist_big_tab .vc_tta.vc_general .vc_tta-title-text:not(:empty):not(:first-child),
+.wpb-js-composer #therapist_big_tab .vc_tta.vc_general .vc_tta-title-text:not(:empty)~* {
+    margin-left: 0;
+      color: #3aba9d;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: center;
+  text-transform: none;
+  letter-spacing: 0px;
+}
+#therapist_big_tab .vc_tta-tab a i {
+	width: 106px;
+    height: 106px;
+    border: 1px solid #dbdbdb;
+    background: #ffffff;
+    color: #3aba9d;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-stretch: normal;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0px;
+    border-radius: 50%;
+}
+#therapist_big_tab .vc_tta-tab a i.entypo-icon-users:before {
+	content: url(../img/PeopleNormal.png);
+	line-height: 133px;
+}
+#therapist_big_tab .vc_tta-tab a i.vc-material-chat_bubble_outline:before {
+	content: url(../img/Group7Normal.png);
+	line-height: 151px;
+}
+#therapist_big_tab .vc_tta-tab a i.vc-material-markunread:before {
+	content: url(../img/Fill1Normal.png);
+	line-height: 133px;
+}
+
+
+.notifications_style .widget_text {
+    background-color: white;
+    border-radius: 12px;
+}
+.notifications_style .widgettitle {
+	    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-stretch: normal;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+      border-radius: 8px 8px 0 0;
+      padding: 13px;
+}
+#upcoming_block .widgettitle {
+	  background: #3aba9d;
+}
+#notifications_block .widgettitle {
+	  background: #ff4f52;
+}
+.notifications_style .textwidget {
+	padding: 13px;
+    min-height: 300px;
+}
+
+/*small tab*/
+#therapist_small_tab {
+	    min-height: 300px;
+    background-color: white;
+    border-radius: 0 0 8px 8px;
+}
+#therapist_small_tab .vc_tta-tab a {
+	display: flex;
+    flex-direction: column;
+        border: none;
+    background: transparent;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+#therapist_small_tab .vc_tta-tab a i {
+	    font-size: 76px;
+    line-height: inherit;
+}
+.wpb-js-composer #therapist_small_tab .vc_tta-color-grey.vc_tta-style-classic.vc_tta-tabs .vc_tta-panels {
+    background-color: transparent;
+}
+.wpb-js-composer #therapist_small_tab .vc_tta-tabs.vc_tta-tabs-position-top .vc_tta-tabs-list {
+    display: flex;
+	justify-content: space-between;
+    flex-wrap: wrap
+}
+.wpb-js-composer #therapist_small_tab .vc_tta.vc_general .vc_tta-tab {
+    padding: 0;
+    /*border-radius: 50%;*/
+    /*border: 1px solid #cccccc87;*/
+    /*width: 164px;*/
+    /*height: 164px;*/
+    /*background: white;*/
+    display: flex;
+}
+.wpb-js-composer #therapist_small_tab .vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active>a {
+    background: transparent;
+}
+.wpb-js-composer #therapist_small_tab .vc_tta-color-grey.vc_tta-style-classic .vc_tta-tab.vc_active>a {
+    border: none;
+    background: transparent;
+    width: 100%;
+    text-align: center;
+}
+.wpb-js-composer #therapist_small_tab .vc_tta.vc_general .vc_tta-title-text:not(:empty):not(:first-child),
+.wpb-js-composer #therapist_small_tab .vc_tta.vc_general .vc_tta-title-text:not(:empty)~* {
+    margin-left: 0;
+      color: #3aba9d;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: center;
+  text-transform: none;
+  letter-spacing: 0px;
+}
+#therapist_small_tab .vc_tta-tab a i {
+	width: 55px;
+    height: 55px;
+    border: 1px solid #dbdbdb;
+    background: #ffffff;
+    color: #3aba9d;
+    font-family: Montserrat;
+    font-size: 13px;
+    font-style: normal;
+    font-stretch: normal;
+    font-weight: 400;
+    line-height: 68px;
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0px;
+    border-radius: 50%;
+}
+#therapist_small_tab .vc_tta-tab a i.entypo-icon-users:before {
+	content: url(../img/PeopleNormal.png);
+	line-height: 133px;
+}
+#therapist_small_tab .vc_tta-tab a i.vc-material-chat_bubble_outline:before {
+	/*content: url(../img/Group7Normal.png);*/
+	/*line-height: 151px;*/
+	background-image: url('../img/Group7Normal.png');
+    background-size: 26px 26px;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    content: "";
+    background-repeat: no-repeat;
+}
+#therapist_small_tab .vc_tta-tab a i.vc-material-markunread:before {
+	/*content: url(../img/Fill1Normal.png);*/
+	background-image: url('../img/Fill1Normal.png');
+    background-size: 29px 21px;
+    display: inline-block;
+    width: 29px;
+    height: 21px;
+    content: "";
+    background-repeat: no-repeat;
+}
+#therapist_small_tab .vc_tta-tab a i.vc-material-markunread {
+	    line-height: 64px;
 }
