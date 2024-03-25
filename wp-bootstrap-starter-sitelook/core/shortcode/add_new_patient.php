@@ -52,6 +52,9 @@ function register_accueilli($post_id) {
         $nom    = $f['field_5b89408758539'];
         $email  = $f['field_5b8940af5853a'];
         $pseudo = sanitize_title($prenom." ".$nom);
+        $form_intake  = $f['field_5b8e8959a35a9'];
+        $form_privacy  = $f['field_5b8e89b3a35aa'];
+        $form_info  = $f['field_5b8e89e6a35ab'];
 
         if ( !username_exists($pseudo) && !email_exists($email) ) {
 
@@ -83,7 +86,26 @@ function register_accueilli($post_id) {
             );
 
             //envoyer_mail($email,232, $values_emails);
-            wp_new_user_notification( $user_id, null, 'user' );
+            $attachments = array();
+
+            if ($form_intake) {
+                $form_intake_attachments = CORE_PATH . '/doc/IntakeForm.docx';
+                array_push($attachments, $form_intake_attachments);
+            } 
+
+            if ($form_privacy) {
+                $form_privacy_attachments = CORE_PATH . '/doc/NoticeofPrivacyPractices.docx';
+                array_push($attachments, $form_privacy_attachments);
+            }            
+
+            if ($form_info) {
+                $form_info_attachments = CORE_PATH . '/doc/InformedConsent.doc';
+                array_push($attachments, $form_info_attachments);
+            }
+
+            $attachments = array($form_intake_attachments, $form_privacy_attachments, $form_info_attachments);
+
+            wp_new_user_notification_custom( $user_id, null, 'user', $attachments );
 
             /* ------  ADD THE DO_ACTION SAVE POST ------ */
             do_action('acf/save_post', "user_".$user_id);
