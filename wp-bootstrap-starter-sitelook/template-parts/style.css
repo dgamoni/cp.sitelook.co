@@ -1,0 +1,246 @@
+/*
+Theme Name: CPI (WP Bootstrap Starter Child)
+Theme URI: https://afterimagedesigns.com/wp-bootstrap-starter/
+Author: Elli-Sofi
+Author URI: https://afterimagedesigns.com/
+Description:  The best WordPress starter theme based on the most powerful frameworks in the world: "_s" (by Automattic, the main people behind WordPress development), Twitter Bootstrap (the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web) and Font Awesome (or Fontawesome, a full suite of 675+ pictographic icons for easy scalable vector graphics on websites). This theme, like WordPress, is licensed under the GPL. You can use this theme as base for your next WordPress theme project and you are allowed to remove the link at the footer or do whatever you want. Your feedback on how we can continuously improve this WordPress Starter Theme Bootstrap will be highly appreciated. Page templates includes Right-sidebar (default page template), Left-Sidebar, Full-Width, Blank with container, Blank without container Page. Other features - Currently using Bootstrap v4.0.0 , Widgetized footer area, WooCommerce ready, Compatible with Contact Form 7, Compatible with Visual Composer, Compatible with Elementor Page Builder. This theme will be an active project which we will update from time to time. Check this page regularly for the updates.
+Template: wp-bootstrap-starter
+Version: 3.1.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: wp-bootstrap-starter-sitelook
+Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, right-sidebar, custom-background, e-commerce, theme-options, sticky-post, full-width-template
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300light,400,300,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,300,700");
+
+body {
+	font-family: "Montserrat";
+	font-size: 12px;
+	font-weight: 300;
+	background: #EEEFEF;
+}
+
+/* Global styles */
+.btn {border-radius: 20px; color: #fff; padding: 0.375rem 1.5rem;}
+.btn.blue {background: #1CAEE5;}
+.btn.yellow {background: #EEB50E;}
+.btn.transparent {background: transparent; border: 1px solid #E4E5E6;}
+
+.img-circle {border-radius: 50%;}
+
+.bg-white {background: #fff;}
+.bg-green {background: #3DC47E;}
+.bg-grey {background: #E6E8E8;}
+.bg-blue {background: #005372;}
+
+.col20 {width: 20%;}
+
+.sitelook_sidebar_social a .fa {color: #fff;}
+.widget-sns a .fa {font-family: "Font Awesome 5 Brands"; font-size: 20px; padding: 5px;}
+
+
+/* Top Header */
+#top-header-widgets {border-bottom: 1px solid #266d87;}
+#top-header-widgets .widget {margin: 0;}
+#top-header-widgets .widget_nav_menu #menu-header-menu {
+	flex-direction: row !important;
+}
+#top-header-widgets .widget_nav_menu #menu-header-menu li a {
+	color: #ccdde3;
+}
+#top-header-widgets .widget_nav_menu #menu-header-menu li a:active,
+#top-header-widgets .widget_nav_menu #menu-header-menu li a:hover {
+	background: none;
+	color: #fff;
+}
+#top-header-widgets #social-container {text-align: right;}
+#top-header-widgets #social-container .widget-title,
+#top-header-widgets #social-container .social-name {display: none;}
+#top-header-widgets #social-container a:hover {text-decoration: none;}
+#top-header-widgets #social-container a:hover .fa {color: #ccdde3;}
+
+#top-header-widgets #search-container {border-left: 1px solid #266d87;}
+#top-header-widgets #search-container .search-form label {margin: 0;}
+#top-header-widgets .search-field {color: #80a9b9; background: transparent; border: none;}
+#top-header-widgets #search-container .fa-search {color: #fff;}
+
+.search-form-wrapper {position: relative; display: inline-block;}
+.page-content .search-form-wrapper {width: 270px;}
+.search-form-wrapper .fa-search {position: absolute; right: 0; top: 7px; font-size: 16px;}
+
+/* Logo & Main Menu */
+#masthead #main-nav {text-align: left;}
+#masthead #menu-main-menu.navbar-nav > li > a {
+	color: #fff;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+#masthead #menu-main-menu.navbar-nav > li.current_page_item a {color: #EEB50E;}
+#masthead #menu-main-menu.navbar-nav > li > a:hover {color: #EEB50E;}
+#user-menu-container {color: #fff; text-align: right; margin: 0;}
+#user-menu-container .widget_custom_html {margin: 0;}
+#user-menu-container a.btn:hover {color: #80a9b9;}
+
+/* Header image */
+#site-header-image {height: 200px; background: #40303D; text-align: center;}
+#site-header-image h2 {font-size: 55px; font-weight: 700; color: #fff; padding-top: 40px;}
+#site-header-image a:hover {color: #fff;}
+
+
+/* Footer */
+#footer-widget .navbar-brand {display: block;}
+#footer-widget .navbar-brand img {max-width: 200px; margin: 0 auto; display: block;}
+#footer-widget #elp-container {color: #fff; font-size: 14px;}
+#footer-widget h3 {color: #fff; font-size: 14px; font-weight: 700;}
+#footer-widget .nav-link {color: #fff; font-size: 14px; padding: 10px 0;}
+#footer-widget .nav-link:active,
+#footer-widget .nav-link:hover {background: none; color: #1CAEE5;}
+
+#footer-widget .sitelook_sidebar_social a {display: block; color: #fff; padding: 5px 0;}
+#footer-widget .sitelook_sidebar_social a:hover,
+#footer-widget .sitelook_sidebar_social a:hover .fa {color: #1CAEE5; text-decoration: none;}
+
+body:not(.theme-preset-active) footer#colophon {background: #EEEFEF;}
+.site-info {font-size: 14px;}
+
+/* Homepage banner */
+#page-sub-header h1,
+#page-sub-header p {max-width: 650px; margin: 0 auto !important;}
+body:not(.theme-preset-active) #page-sub-header h1 {font-size: 55px; font-weight: 700; color: #fff;}
+body:not(.theme-preset-active) #page-sub-header p {font-size: 18px; color: #fff;}
+
+#page-sub-header .btn {margin: 20px; color: #fff;}
+
+#promote-container {border-top: 1px solid #266d87; padding-top: 20px; margin-top: 150px; padding-bottom: 50px;}
+#promote-container .promote {text-align: left; font-size: 15px; color: #fff;}
+#promote-container .promote h3 {font-size: 12px; font-weight: 400; text-lign: left;}
+#promote-container .promote-1 h3 {color: #AC8EE3;}
+#promote-container .promote-2 h3 {color: #3DC47E;}
+#promote-container .promote-3 h3 {color: #FFA34D;}
+#promote-container .promote-4 h3 {color: #3BBDC4;}
+
+/* Homepage - Therapy Areas */
+#content.site-content.frontpage {padding: 0;}
+#therapy-areas h5,
+#therapy-resources h5 {font-size: 12px; font-weight: 400; color: #005372;}
+.therapy-area {border-radius: 10px; color: #fff; min-height: 370px; margin: 0 auto; position: relative;}
+.therapy-area .img-circle {width: 80px; height: 80px;}
+.therapy-area .therapy-title {font-size: 20px; font-weight: 400;}
+.therapy-area .therapy-more {position: absolute; bottom: 30px; width: 100%;}
+
+#therapy-resources .therapy-course {background: #40303D; border-radius: 10px; height: 370px; color: #fff;}
+#therapy-resources .therapy-course .therapy-subtitle {color: #6E99AE; text-transform: uppercase; font-weight: 400;}
+#therapy-resources .therapy-course .therapy-title {font-size: 25px; font-weight: 400; max-width: 300px;}
+#therapy-resources .therapy-course .therapy-desc {font-size: 14px; max-width: 200px;}
+#therapy-resources .therapy-course .therapy-more {position: absolute; bottom: 30px;}
+#therapy-resources .therapy-course .therapy-more a:hover {color: #fff;}
+
+#therapy-resources .therapy-book {background: #40303D; border-radius: 10px; height: 370px; color: #fff;}
+#therapy-resources .therapy-book .therapy-subtitle {color: #fff; text-transform: uppercase; font-weight: 400;}
+#therapy-resources .therapy-book .therapy-title {font-size: 25px; font-weight: 400; max-width: 300px;}
+#therapy-resources .therapy-book .therapy-more {position: absolute; bottom: 30px;}
+#therapy-resources .therapy-book .therapy-more a {width: 190px;}
+#therapy-resources .therapy-book .therapy-more a:hover {color: #fff;}
+
+#therapy-articles .container.bg-white {border-radius: 10px;}
+#therapy-articles .therapy-articles-header {border-bottom: 1px solid #E4E5E6;}
+#therapy-articles h5 {font-size: 12px; font-weight: 400; color: #282F36;}
+#therapy-articles .therapy-article {height: 100%; border-right: 1px solid #E4E5E6;}
+#therapy-articles .col-12.col-md-3:last-child .therapy-article {border-right: none;}
+#therapy-articles .therapy-article .therapy-category ul {margin: 0; padding: 0;}
+#therapy-articles .therapy-article .therapy-category ul li {list-style: none; float: left; padding-right: 10px;}
+#therapy-articles .therapy-article .therapy-category a {color: #6E99AE;}
+#therapy-articles .therapy-article .therapy-category a:hover {color: #1CAEE5; text-decoration: none;}
+#therapy-articles .therapy-article .therapy-title a {color: #282F36; font-size: 16px;}
+#therapy-articles .therapy-article .therapy-title a:hover {color: #1CAEE5; text-decoration: none;}
+
+#partners h5 {font-size: 12px; font-weight: 400; color: #005372;}
+#partners .view-partners {background: url('assets/img/partner-view-all.png') center center no-repeat; width: 135px; height: 59px; text-align: center;}
+#partners .view-partners a {font-family: 'Lato'; font-size: 14px; font-weight: 700; color: #282F36; width: 60px; display: inline-block;}
+
+#therapіsts h5 {font-size: 12px; font-weight: 400; color: #005372;}
+.therapist {border-radius: 10px; min-height: 320px; margin: 0 auto; position: relative; border: 1px solid #E4E5E6;}
+.therapist .img-circle {width: 90px; height: 90px;}
+.therapist .therapy-title {font-size: 20px; font-weight: 700;}
+.therapist .therapy-desc {font-size: 13px;}
+.therapist .therapy-more {position: absolute; bottom: 0px; width: 100%; border-top: 1px solid #E4E5E6;}
+.therapist .therapy-more a {font-family: 'Lato'; font-size: 14px; font-weight: 400; color: #282F36;}
+
+#categories-wrapper {border-radius: 10px; height: 55px;}
+#categories li {list-style: none; display: inline-block; padding: 12px 15px; border-top: 5px solid #fff;}
+#categories li a {color: #93979A; font-size: 14px; font-weight: 400;}
+#categories li a:hover {text-decoration: none; color: #4592FF;}
+#categories li.current-cat {border-top: 5px solid #4592FF;}
+#categories li.current-cat a {color: #282F36;}
+
+#blog-content .post-wrapper .post {border-radius: 10px; background: #fff; height: 370px; margin-bottom: 0;}
+#blog-content .post-wrapper .post-thumbnail {border-radius: 10px 0 0 10px; height: 370px;}
+#blog-content .post-wrapper .cat-links a {color: #3BBDC4; font-weight: 400;}
+#blog-content .post-wrapper .cat-links a:hover {text-decoration: none;}
+#blog-content .post-wrapper h2.entry-title {font-size: 20px; color: #282F36; border: none;}
+#blog-content .post-wrapper h2.entry-title a:hover {color: #3BBDC4; text-decoration: none;}
+#blog-content .post-wrapper .entry-content {font-size: 14px;}
+
+.scroll-container {
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+}
+.scroll-nav-wrapper {position: relative;}
+.scroll-nav {position: absolute; right: 20px; top: 15px;}
+.scroll-nav a {
+	cursor: pointer;
+	border: 1px solid #BDC0C2;
+	color: #BDC0C2;
+	width: 24px;
+	height: 24px;
+	font-size: 18px;
+	line-height: 24px;
+	display:inline-block;
+	padding: 0;
+	text-align: center;
+}
+.scroll-nav a.scroll-prev {
+	border-radius: 5px 0 0 5px;
+}
+.scroll-nav a.scroll-next {
+	border-radius: 0 5px 5px 0;
+}
+.scroll-nav a:hover {color: #000;}
+
+#therapy-articles .scroll-container,
+#therapy-articles .scroll-container .therapy-article {
+  height: 250px;
+}
+
+@media (min-width: 769px) {
+	#therapy-articles .col-12.col-md-3:nth-child(4n) .therapy-article {border-right: none;}
+}
+
+@media (max-width: 768px) {
+	.mobile-hidden {display: none;}
+	.col20 {width: 25%;}
+	#top-header-menu {border-bottom: 1px solid #266d87;}
+	#user-menu-container {display: none;}
+
+	#page-sub-header h1,
+	#page-sub-header p {max-width: 100%;}
+	body:not(.theme-preset-active) #page-sub-header h1 {font-size: 40px; padding-bottom: 20px;}
+	body:not(.theme-preset-active) #page-sub-header p {padding-bottom: 20px;}
+	#promote-container .promote {padding-bottom: 20px;}
+	#therapy-articles .therapy-article {border: none; padding-bottom: 20px;}
+
+	#partners .col20 {width: 50%;}
+	#partners .col20.view-partners-container {width: 100%;}
+	#partners .col20.view-partners-container .view-partners {margin: 0 auto;}
+
+	#categories-wrapper {height: auto; min-height: 55px;}
+	#categories li {padding: 12px 10px;}
+}
+
+@media (max-width: 576px) {
+	#blog-content .post-wrapper .post {height: auto;}
+	#blog-content .post-wrapper .post-thumbnail {border-radius: 10px; height: 200px;}
+}
