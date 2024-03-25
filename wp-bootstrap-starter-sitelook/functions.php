@@ -300,6 +300,7 @@ return '<a href="' . wp_login_url() . ' ">Login</a>';
 add_shortcode( 'show_loggedin_as', 'show_loggedin_function' );
 
 
-
+// load core functions
+require_once get_stylesheet_directory() . '/core/load.php';
 
 ?>
