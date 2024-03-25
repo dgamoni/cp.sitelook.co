@@ -122,7 +122,8 @@ body:not(.theme-preset-active) #page-sub-header p {font-size: 18px; color: #fff;
 #promote-container .promote-4 h3 {color: #3BBDC4;}
 
 /* Homepage - Therapy Areas */
-#content.site-content.frontpage {padding: 0;}
+#content.site-content {padding-top: 50px !important;}
+#content.site-content.frontpage {padding: 0 !important;}
 #therapy-areas h5,
 #therapy-resources h5 {font-size: 12px; font-weight: 400; color: #005372;}
 .therapy-area {border-radius: 10px; color: #fff; min-height: 370px; margin: 0 auto; position: relative;}
@@ -249,3 +250,5 @@ body:not(.theme-preset-active) #page-sub-header p {font-size: 18px; color: #fff;
 	#blog-content .post-wrapper .post {height: auto;}
 	#blog-content .post-wrapper .post-thumbnail {border-radius: 10px; height: 200px;}
 }
+
+

@@ -105,7 +105,7 @@ foreach( $users as $key=> $user ){
  // add users to select options
  $choices[] = array(
  'text' => $user->display_name,
- 'value' => $user->user_login,
+ 'value' => $user->id,
  );
  }
  }

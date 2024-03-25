@@ -25,6 +25,9 @@ function patient_reg_complete_func( $atts ){
 						<h2 class="widgettitle">Welcome <?php echo $user->data->display_name; ?>! Please complete the following to fully setup your patient account.</h2>			
 							<div class="textwidget">		
 
+								<h4>Billing Setup</h4>
+								<?php echo do_shortcode('[set_patient_card]'); ?>
+
 								<form id="update_user_data" action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="post">
 								    <div class="acf-field acf-field-text"  data-width="50">
 										<div class="acf-label">
@@ -59,7 +62,9 @@ function patient_reg_complete_func( $atts ){
 										</div>
 									</div>
 
-									<p>Forms to complete and sign</p>
+
+
+									<h4>Forms to complete and sign</h4>
 								    
 								    <?php //var_dump( check_form_status($user->data->ID, 2) ); ?>
 

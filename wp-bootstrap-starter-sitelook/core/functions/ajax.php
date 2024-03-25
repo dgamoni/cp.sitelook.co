@@ -1,5 +1,31 @@
 <?php 
 
+
+add_action( 'wp_ajax_appointment_fee_save', 'appointment_fee_save' );
+add_action( 'wp_ajax_nopriv_appointment_fee_save', 'appointment_fee_save' );
+function appointment_fee_save() {
+
+	$data_patientid   = isset( $_POST['data_patientid'] )    ? (int) $_POST['data_patientid']        : 0;
+	$sitelook_appointment_fee   = isset( $_POST['sitelook_appointment_fee'] )    ? (int) $_POST['sitelook_appointment_fee']        : 0;
+		if($data_patientid) {
+			update_field('sitelook_appointment_fee', $sitelook_appointment_fee, 'user_'.$data_patientid);
+			//update_user_meta( $data_patientid, 'sitelook_appointment_fee', 'good' )
+		}
+		$res['data_patientid'] = $data_patientid;
+
+		wp_send_json_success($res);
+
+	wp_die();	
+}
+
+add_action( 'wp_ajax_update_message', 'update_message_sl' );
+add_action( 'wp_ajax_nopriv_update_message', 'update_message_sl' );
+function update_message_sl() {
+
+	echo json_encode( do_shortcode("[messages]") );
+ 	exit;
+}
+
 // ga_provider_appointments_custom.php
 
 // add_action( 'wp_ajax_appointment_update_note', 'appointment_update_note' );
@@ -55,7 +81,8 @@ function ga_calendar_time_slots_custom() {
 		$res['date'] = $date;
 		$res['timezone'] = $timezone;
 		$res['ga_calendar'] = $ga_calendar->calendar_time_slots($date);
-		$res['time_array'] = explode(";", $ga_calendar->calendar_time_slots($date));
+		$res['time_array'] = array_filter(explode(";", $ga_calendar->calendar_time_slots($date)));
+		//$res['post'] =  $_POST;
 
 		wp_send_json_success($res);
 

@@ -2,8 +2,21 @@
 function custom_child_scripts() {
 
 	wp_enqueue_style(
+		'sumoselect-min-css', 
+		CORE_URL . '/css/sumoselect.css'
+	);
+
+	wp_enqueue_style(
 		'custom-style', 
 		CORE_URL . '/css/custom-style.css'
+	);
+
+	wp_enqueue_script(
+	    'jquery-sumoselect-min-js',
+	    CORE_URL . '/js/jquery.sumoselect.min.js',
+        array('jquery'), 
+        '1', // no ver
+        true  
 	);
 
 	wp_enqueue_script(

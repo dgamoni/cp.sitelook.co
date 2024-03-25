@@ -30,3 +30,4 @@ foreach ($dirs as $dir) {
 }
 
 //require_once CORE_PATH.'/lib/jsonstreamingparser/vendor/autoload.php';
+require_once CORE_PATH.'/lib/paypal-php-sdk/autoload.php';
