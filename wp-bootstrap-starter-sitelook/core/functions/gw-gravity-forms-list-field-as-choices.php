@@ -117,3 +117,9 @@ foreach( $users as $key=> $user ){
  
  return $form;
 }
+
+
+// add_filter("gform_field_value_myfield", "populate_myfield");
+// function populate_myfield($value){
+//     return get_post_meta($GLOBALS['post']->ID, 'myfield', true);
+// }

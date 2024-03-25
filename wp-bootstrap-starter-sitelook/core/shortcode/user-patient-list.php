@@ -18,7 +18,7 @@ function user_patient_list_func( $atts ){
 						<h2>Patients <b>Management</b></h2>
 					</div>
 					<div class="col-sm-7">
-						<a href="<?php echo home_url() .'/therapist-home/add-new-patient/'; ?>" class="btn btn-primary" ><i class="material-icons">&#xE147;</i> <span>Add New Pacient</span></a>
+						<a href="<?php echo home_url() .'/therapist-home/add-new-patient/'; ?>" class="btn btn-primary" ><i class="material-icons">&#xE147;</i> <span>Add New Patient</span></a>
 						<a href="#" class="btn btn-primary"><i class="material-icons">&#xE24D;</i> <span>Export to Excel</span></a>						
 					</div>
                 </div>

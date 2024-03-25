@@ -29,5 +29,34 @@ jQuery(document).ready(function($){
 	});
 
 
+    $(document).on('click', '#save_user_data', function(e){
+        e.preventDefault();
+
+            var sitelook_user_address =  $('#update_user_data #sitelook_user_address').val();
+            var sitelook_user_state =  $('#update_user_data #sitelook_user_state').val();
+            var user_meta_phone =  $('#update_user_data #user_meta_phone').val();
+            var user_id = $('#update_user_data #user_id').val();
+            var intake_form = $('#update_user_data .applay_sitelook_intake_form_front').val();
+            var consent_form = $('#update_user_data .applay_sitelook_informed_consent_form_front').val();
+
+            $.ajax({
+                type    : "POST",
+                url     : MyAjax.ajaxurl,
+                dataType: "json",
+                data    : "action=save_patinet_data&address=" + sitelook_user_address+'&state='+sitelook_user_state+'&phone='+user_meta_phone+'&user_id='+user_id,
+                success : function (a) {
+                    //console.log(a);
+                    //console.log(a.success);
+                    if(a.success && intake_form == 'Completed' && consent_form == 'Completed'){
+                        $('#update_user_data #message').html('Thanks! Setup complete').show();
+                        window.location.replace('patient-home');
+                    } else {
+                        $('#update_user_data #message').addClass('error').html('Please complete setup!').show();
+                    }
+
+                }
+            }); //end ajax      
+    });
+
 
 }); //end ready

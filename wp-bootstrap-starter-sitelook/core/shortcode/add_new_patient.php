@@ -14,7 +14,7 @@ function my_acf_user_form_func( $atts ) {
 			'html_before_fields' => $html,
 			'field_groups' => array(3932),
 			//'form' => true, 
-			'submit_value' => __('Add New Pacient', ''),
+			'submit_value' => __('Add New Patient', ''),
 			'return' => home_url('therapist-home/#patients'),
 		);
 
@@ -91,19 +91,23 @@ function register_accueilli($post_id) {
             if ($form_intake) {
                 $form_intake_attachments = CORE_PATH . '/doc/IntakeForm.docx';
                 array_push($attachments, $form_intake_attachments);
+                //update_user_meta($user_id, 'form_intake', 'no complete' );
             } 
 
             if ($form_privacy) {
                 $form_privacy_attachments = CORE_PATH . '/doc/NoticeofPrivacyPractices.docx';
                 array_push($attachments, $form_privacy_attachments);
+                //update_user_meta($user_id, 'form_privacy', 'no complete' );
             }            
 
             if ($form_info) {
                 $form_info_attachments = CORE_PATH . '/doc/InformedConsent.doc';
                 array_push($attachments, $form_info_attachments);
+                //update_user_meta($user_id, 'form_info', 'no complete' );
             }
 
-            $attachments = array($form_intake_attachments, $form_privacy_attachments, $form_info_attachments);
+            //$attachments = array($form_intake_attachments, $form_privacy_attachments, $form_info_attachments);
+            $attachments = '';
 
             wp_new_user_notification_custom( $user_id, null, 'user', $attachments );
 
