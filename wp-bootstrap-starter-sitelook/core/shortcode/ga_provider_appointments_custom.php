@@ -85,22 +85,23 @@ function ga_provider_appointments_custom_func(){
 										$out .= '<span class="client_time">'.$app_time.'</span>';
 										$out .= '<span class="client_name"><a href="'.home_url() .'/therapist-home/patient-details/?patient_id='. $client_id.'" >'.$client->data->display_name.'</a></span>';
 										$out .= '<span class="client_servise">'. $service_name . '</span>';
-										$out .= '<a class="client_note collapse_note_'.get_the_id().'" data-toggle="collapse" href="#collapse_client_note_'. get_the_id().'" role="button" aria-expanded="false" aria-controls="collapse_client_note_'. get_the_id().'"><span>Add Note</span></a>';
+										//$out .= '<a class="client_note collapse_note_'.get_the_id().'" data-toggle="collapse" href="#collapse_client_note_'. get_the_id().'" role="button" aria-expanded="false" aria-controls="collapse_client_note_'. get_the_id().'"><span>Add Note</span></a>';
+										$out .= '<a class="client_note btn btn-primary button_message"  href="'.home_url() .'/therapist-home/patient-details/new-note/?patient_id='. $client_id.'" ><span>Add Note</span></a>';
 								$out .= '</div>';
 
 									$note_class ='';
 									if ( !$sitelook_appointment_note ) {
 										$note_class = 'note_hide';
 									} 
-										$out .= '<span class="'.$note_class.' appointment_note appointment_note_'. get_the_id().'"><i>*</i> '.$sitelook_appointment_note.'</span>';
+										//$out .= '<span class="'.$note_class.' appointment_note appointment_note_'. get_the_id().'"><i>*</i> '.$sitelook_appointment_note.'</span>';
 									
 									
 
 						$out .= '</div>';			
 
-						$out .= '<div class="add_note collapse" id="collapse_client_note_'. get_the_id().'">';
-							$out .= '<textarea class="update_note_text_'.get_the_id().'" name="add_note" data-id="'.get_the_id().'">'.$sitelook_appointment_note.'</textarea><a href="#" id="update_note" class="update_note btn btn-primary button_message" data-note_to="'.get_the_id().'">Submit</a>';
-						$out .= '</div>';
+						//$out .= '<div class="add_note collapse" id="collapse_client_note_'. get_the_id().'">';
+							//$out .= '<textarea class="update_note_text_'.get_the_id().'" name="add_note" data-id="'.get_the_id().'">'.$sitelook_appointment_note.'</textarea><a href="#" id="update_note" class="update_note btn btn-primary button_message" data-note_to="'.get_the_id().'">Submit</a>';
+						//$out .= '</div>';
 
 					endwhile;
 					wp_reset_postdata();	

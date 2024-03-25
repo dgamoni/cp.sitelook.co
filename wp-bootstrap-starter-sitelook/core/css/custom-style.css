@@ -467,7 +467,8 @@ a.um-message-btn.button_message:before {
 }
 
 #new_patient_block .widgettitle {
-	background: #266d87;
+	/*background: #266d87;*/
+	    background: #006687;
 	padding: 23px;
 }
 #new_patient_block .acf-input-wrap input {
@@ -645,4 +646,30 @@ font-size: 15px;
 line-height: 28px;
 font-weight: 400;
 font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.client_note.btn  {
+    padding: 0 1.5rem;
+}
+.ginput_container .select2-container {
+    width: 50% !important;
+}
+.notes_wrap .patient_info_header {
+	
+}
+table.table td a.signature_required {
+	    background-color: #F44336;
+    color: white;
+    padding: 5px;
+    font-weight: 400;
+}
+
+#gappointments_calendar.custom_calendar {
+    position: absolute;
+}
+
+#gform_1 #gappointments_calendar_slots {
+    display: none !important;
+}
+#date_pre {
+    margin-left: 15px;
 }

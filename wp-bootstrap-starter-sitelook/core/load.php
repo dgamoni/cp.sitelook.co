@@ -3,8 +3,10 @@ define('CORE_PATH', get_stylesheet_directory() . '/core');
 define('CORE_URL', get_stylesheet_directory_uri()  . '/core');
 
 $dirs = array(
+	CORE_PATH . '/post_types/',
     CORE_PATH . '/shortcode/',
-    CORE_PATH . '/functions/',
+    CORE_PATH . '/functions/'
+
 );
 foreach ($dirs as $dir) {
     $other_inits = array();
@@ -26,3 +28,5 @@ foreach ($dirs as $dir) {
             include_once $dir . $other_init;
     }
 }
+
+//require_once CORE_PATH.'/lib/jsonstreamingparser/vendor/autoload.php';

@@ -1,6 +1,54 @@
 
 
 jQuery(document).ready(function($){
+
+   
+    $('#gform_1 #gappointments_calendar').addClass('custom_calendar');
+    $('#gform_1 #ga_appointments_calendar').hide();
+    $('#gform_1 #ga_appointments_calendar').parent().parent().prepend('<input name="date_pre" id="date_pre" style="display:none;" value="" class="datepicker medium mdy datepicker_no_icon hasDatepicker" readonly type="text">');
+    $('#gform_1 #date_pre').show();
+
+    $(document).on('click', '#date_pre', function(e){
+        //console.log('click');
+        $('#gform_1 #ga_appointments_calendar').show();
+
+    });
+
+    $(document).on('click', '.day_available', function(event) {
+         console.log('click');
+         console.log( $(this).attr('date-go'));
+         $('#date_pre').val(  $(this).attr('date-go') );
+         $('#gform_1 #ga_appointments_calendar').hide();
+
+
+        // Data for AJAX
+        var current_month = jQuery(this).attr('date-go');
+        var service_id    = jQuery(this).attr('service_id');
+        var provider_id   = jQuery(this).attr('provider_id');
+        var form_id       = jQuery('#ga_appointments_calendar').attr('form_id');
+
+        $.ajax({
+                type    : "POST",
+                url     : MyAjax.ajaxurl,
+                dataType: "json",
+                data    : "action=ga_calendar_time_slots_custom&current_month=" + current_month+'&service_id='+service_id+'&provider_id='+provider_id+'&form_id='+form_id,
+                success : function (a) {
+                    console.log(a);
+                    $('#input_1_8').empty();
+                    $.each(a.data.time_array,function(key, value) {
+                        $('#input_1_8').append('<option value=' + key + '>' + value + '</option>');
+                    });
+
+
+                }
+            }); //end ajax  
+
+    });
+
+
+
+
+
 	$('[data-toggle="tooltip"]').tooltip();
 
 	

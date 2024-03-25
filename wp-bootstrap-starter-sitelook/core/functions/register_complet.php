@@ -26,15 +26,4 @@ function my_registration_page_redirect() {
 }
 
 
-add_action( 'login_enqueue_scripts', 'enqueue_my_login_script' );
-function enqueue_my_login_script( $page ) {
 
-       	wp_enqueue_script(
-    	    'custom_loigin_js',
-    	    CORE_URL . '/js/custom_loigin.js',
-            array('jquery'), 
-            '1', // no ver
-            true  
-    	);
-
-}
